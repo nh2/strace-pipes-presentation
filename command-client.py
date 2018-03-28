@@ -1,5 +1,6 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python2
 
+from __future__ import print_function
 import socket
 import sys
 
@@ -14,4 +15,4 @@ while True:
   data = sock.recv(100)
   if len(data) == 0:
     break
-  sys.stdout.buffer.write(data)
+  sys.stdout.write(data)
