@@ -219,11 +219,11 @@ python2 23573 .. 1w FIFO 0,12   .. 139828372 pipe
 
 `1w` means process `23573` has a write-end of the pipe open as file descriptior `1`.
 
-**So the only possible producer to unblock our `read(3,` in `strace` is process is process `23573`.**
+**So the only possible producer to unblock our `read(3,` in `strace` is process `23573`.**
 
 ---
 
-Let's `strace` the process that has the wipe write end:
+Let's `strace` the process that has the write end:
 
 ```
 % sudo strace -fp 23573 -y
